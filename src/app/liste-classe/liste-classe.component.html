@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+        <app-update-classes [classe]="updatedClasse" (classeUpdated)= "classeUpdated($event)" [ajout]="ajout" ></app-update-classes>
+        </div>
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <thead>
+    <tr> <th>Id</th><th>Nom classe</th><th>Departement</th> </tr>
+    </thead>
+    <tbody *ngFor="let cat of classes">
+    <tr>
+    <td>{{cat.idClasse}}</td>
+    <td>{{cat.nomClasse}}</td>
+    <td>{{cat.departement}}</td>
+    <td><a class="btn btn-success" (click)="updateClasse(cat)">Editer</a></td>
+
+
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    

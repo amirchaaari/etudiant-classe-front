@@ -1,0 +1,48 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Etudiant :</h2>
+    </div>
+    <form >
+        <div hidden class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Etudiant</label>
+        <input type="text" [(ngModel)]="newEtudiant.idEtudiant"
+        name="idEtudiant" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Etudiant</label>
+        <input type="text"[(ngModel)]= "newEtudiant.nom"
+        name="nomEtudiant" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+            <label >Prenom Etudiant</label>
+            <input type="text"[(ngModel)]= "newEtudiant.prenom"
+            name="prenomEtudiant" class="form-control">
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4" >
+                <label >Cin</label>
+                <input type="text"[(ngModel)]= "newEtudiant.cin"
+                name="cinEtudiant" class="form-control">
+                </div>
+        
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date de naissance</label>
+        <input type="date" [(ngModel)]= "newEtudiant.dateNaissance"
+        name="dateNaissance" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Classe</label>
+            <select class="form-control form-control-lg" id="idClasse" name="idClasse"
+            [(ngModel)]="newIdClasse">
+             <option *ngFor="let c of classes" [value]="c.idClasse" >
+             {{c.nomClasse}}
+            </option>
+            </select>
+            </div>
+            
+        <div class="mt-2">
+        <button type="submit" (click)="addEtudiant()"class="btn btn-success">Ajouter</button>
+        </div>
+        <div><h3>{{message}}</h3></div>
+        </form>
+        </div>
+            

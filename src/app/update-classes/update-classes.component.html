@@ -1,0 +1,22 @@
+<form>
+    <div  >
+    <label>ID classe</label>
+    <input type="text" [(ngModel)]="classe.idClasse" name="idCategorie" class="form-control w-25">
+    </div>
+    <div>
+    <label>Nom classe</label>
+    <input type="text" [(ngModel)]="classe.nomClasse" name="nomClasse" class="form-control"
+    placeholder="Entrez un nom de classe...">
+    </div>
+    <div>
+        <label>departement</label>
+        <input type="text" [(ngModel)]="classe.departement" name="nomdepartement" class="form-control"
+        placeholder="Entrez un departement...">
+        </div>
+    <div class="mt-2">
+        <button type="submit" [disabled]="!classe.nomClasse" class="btn btn-success"
+        (click)="saveClasse()" >{{ajout ? 'Ajouter' : 'Modifier'}}
+        </button>
+        
+    </div>
+</form>
